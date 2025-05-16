@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine  # 使用轻量级 Alpine 版本
+    container_name: postgres
+    environment:
+      POSTGRES_USER: root     # 自定义用户名
+      POSTGRES_PASSWORD: 123456  # 自定义密码
+      POSTGRES_DB: public   # 初始创建的数据库名
+    ports:
+      - "5432:5432"             # 主机端口:容器端口
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # 数据持久化
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U myuser -d mydatabase"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:                # 声明持久化卷

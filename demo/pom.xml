@@ -29,6 +29,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
+			<version>3.0.5</version> <!-- 请检查最新版本 -->
+		</dependency>
+
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.32</version>
@@ -50,7 +56,7 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 			<version>3.0.4</version>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>

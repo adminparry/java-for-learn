@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ENC(qStGagKXtrIOgd0YSYjEY0QQE+AqM5Gx1Bsg0Lhtxahrar5kzR1DPQhdS4LL5IQGS/U8sI3FmCzeFISvY5StWmRhFsataaCehaX/Uk/2+10TFV+u3hsv+GYhNQC0+aIt7jjZSYZDcPCqIqQ+LoOG5LZK1RDKypVp/hs0TXvNNXb71Crxm2eNDs3nL7dJ360f)
-    username: ENC(z5RrlFI3KEEDzOL4Gaphh57lAHQJrTaTpIX4LEZgzUc=)
-    password: ENC(d28fwOMUGCxW7KJvvYPoOeYViA0wUvX0USmSXbpREXA=)
+    url: ENC(ZCqUOPrSLwTL9Aptjjl5/rzFVZ5BDJSD2+5to8aAZnr2UphLawMmE5QkPwXcolgq+mGBLntY9Yksfyxw1TDFlA==)
+    username: ENC(2dwq/1A3Izar5AxsXgp+uRKmyBN4NWkK)
+    password: ENC(dJT0HkQvDEYOFPbdvlxo3Epaat/czOph)
     driver-class-name: org.postgresql.Driver
     hikari:
       max-lifetime: 1800000  # 连接最大寿命 30min
@@ -11,3 +11,8 @@ spring:
       maximum-pool-size: 200  # 最大连接池大小
       connection-test-query: "select 1"
       idle-timeout: 600000 # 空闲连接超时时长 10min
+jasypt:
+  encryptor:
+    password: your_grace
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
